@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div><!-- Aca iria la parte del concurso --></div>
+    <div><!-- Aca iria el mensaje de que no puede participar --></div>
+    <script>
+        var mayorDeEdad = confirm("¿Usted es mayor de edad?");
+        /* 
+            mayorDeEdad es de tipo "boolean"
+            y tiene dos valores posibles
+            true y false
+        */
+
+        /*
+            if(CONDICION) {
+                // Se ejecuta si la condicion es true
+            }
+        */
+
+        /*
+            OPERADORES DE COMPARACION
+            VALORUNO OPERADOR VALORDOS
+            <  "Menor"
+            >  "Mayor"
+            <= "Menor o igual"
+            >= "Mayor o igual"
+            == "Igual" "0" == 0 -> true
+            === "Identico" "0" === 0 -> false
+            != "Distinto"
+            !== "Desigual"
+        */
+
+        if(mayorDeEdad == true){
+            document.write("<h1>Bienvenido al concurso</h1>");
+        } else {
+            document.write("<h1><i>No puede participar por no ser mayor de edad</i></h1>")
+        }
+    </script>
+</body>
+</html>

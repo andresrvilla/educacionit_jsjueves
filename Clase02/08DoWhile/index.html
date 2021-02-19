@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var ingresa;
+        var acumulador = 0;
+        var cant = 0;
+        
+        do{
+            var notaPrompt = prompt("Ingrese una nota");
+            var nota = parseInt(notaPrompt);
+            acumulador += nota; //es equivalente a acumulador = acumunador + nota;
+            cant++;
+            ingresa = confirm("Desea ingresar una nota?");
+        }while(ingresa == true);
+
+        var promedio = acumulador/cant;
+        document.write("El promedio es :"+promedio);
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var cantPrompt = prompt("Ingrese la cantidad de hijos");
+        var cant = parseInt(cantPrompt);
+        var salario = 0;
+        /*if(cant == 1){
+            salario = 1000;
+        }else if (cant==2){
+            salario = 1800;
+        }else if(cant == 3){
+            salario = 2500
+        } else if(cant == 4){
+            salario = 3100;
+        }else if(cant == 5){
+            salario = 3100;
+        }else{
+            salario = 4000;
+        }*/
+
+        switch(cant){
+            case 1:
+                salario = 1000;
+                break;
+            case 2:
+                salario = 1800;
+                break;
+            case 3:
+                salario = 2500;
+                break;
+            //Agrupo los casos 4 y 5
+            case 4:
+            case 5:
+                salario = 3100;
+                break;
+            default:
+                salario = 4000;
+                break;
+        }
+
+        document.write("El salario es de "+salario);
+    </script>
+</body>
+</html>

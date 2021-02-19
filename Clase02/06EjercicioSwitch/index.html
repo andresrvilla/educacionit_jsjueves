@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var ahora = new Date();
+        document.write("Dia de la semana numero "+ahora.getDay() + "<br>");
+        switch(ahora.getDay()){
+            case 0:
+                document.write("Hoy es domingo");
+                break;
+            case 1:
+                document.write("Hoy es lunes");
+                break;
+            case 2:
+                document.write("Hoy es martes");
+                break;
+            case 3:
+                document.write("Hoy es miercoles");
+                break;
+            case 4:
+                document.write("Hoy es jueves");
+                break;
+            case 5:
+                document.write("Hoy es viernes");
+                break;
+            case 6:
+                document.write("Hoy es sabado");
+                break;
+        }
+    </script>
+</body>
+</html>

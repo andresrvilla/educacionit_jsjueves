@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var sueldo = prompt("Por favor ingrese su sueldo");
+        var bono = prompt("Por favor ingrese su bono");
+
+        document.write("Sueldo: "+sueldo+"<br>");
+
+        // "Sueldo :" + 1000 + "<br>"
+        // "Sueldo : 1000" + "<br>"
+        // "Sueldo : 1000 <br>"
+        document.write("Bono: "+bono);
+        
+        //convertir texto a entero: parseInt(valor);
+        //convertir texto a decimal: parseFloat(valor);
+        var sueldoNumero = parseFloat(sueldo);
+        var bonoNumero = parseFloat(bono);
+        var sueldoNeto = sueldoNumero + bonoNumero
+        //var sueldoNeto = parseFloat(sueldo) + parseFloat(bono);
+        alert("Su sueldo neto es "+sueldoNeto);
+    </script>
+</body>
+</html>
