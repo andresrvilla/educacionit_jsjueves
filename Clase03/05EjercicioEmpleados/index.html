@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        <ul>
+            <li>Valor Uno</li>
+            <li>Valor Dos</li>
+        </ul>
+    -->
+    <ul id="miLista">
+
+    </ul>
+    <script>
+        var empleados = [ "Javier Ruiz Diaz", "Carlos Costa", "Leo Magdic", "Carla Gimenez", "Susana Perez"];
+
+        var lista = document.getElementById("miLista");
+
+        /*
+            for(A;B;C){
+
+            }
+            A: Inicializacion de la variable de control
+            B: Condicion de continuidad
+            C: Cambio de la variable de control (Incremento, Decremento... No necesariamente de 1 en 1)
+        */
+
+        for(var i = 0;i < empleados.length; i++){
+            var valorActual = empleados[i];
+            lista.innerHTML += "<li>"+valorActual+"</li>"; // Equivalente a lista.innerHTML = lista.innerHTML+ "<li>"+valorActual+"</li>"
+        }
+
+    </script>
+</body>
+</html>

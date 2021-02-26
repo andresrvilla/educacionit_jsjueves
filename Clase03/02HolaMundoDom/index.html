@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="miParrafo">Bienvenidos al curso de Javascript</p>
+    <p id="miParrafoDelMedio">Instructor <span id="nombre">Andrés</span> Villa</p>
+    <p id="miOtroParrafo">Jueves de 19 a 22</p>
+    <input type="text" id="miTexto" value="valorInicial">
+    <script>
+        var parrafo = document.getElementById("miParrafo");
+        alert(parrafo.innerText);
+        parrafo.innerText = "Hola Mundo";
+
+        var miPeque = document.getElementById("miParrafoDelMedio");
+        miPeque.innerText="<b>Hola Mundo</b>";
+
+        var otroParrafo = document.getElementById("miOtroParrafo");
+        otroParrafo.innerHTML = "<b>Hola Mundo</b>";
+
+        var miInput = document.getElementById("miTexto");
+        miInput.value = "Hola mundo"; //value es para los elementos de tipo input
+    </script>
+</body>
+</html>

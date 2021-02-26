@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="valorArray"></span>
+    <script>
+        var elSpan = document.getElementById("valorArray");
+
+        var miArray = ["Casa",100,"Pez"];
+        miArray.push("Nuevo Valor"); //agrega un nuevo elemento al final
+        miArray.pop(); //quita el ultimo elemento y lo devuelve para asignar a una variable
+
+        miArray.push(true);
+        miArray.push(50);
+        miArray.push("Perro");
+        miArray.sort();
+
+        //Acceder al ultimo elemento del array
+        miArray[miArray.length - 1];
+
+        //Equivalente al push pero agrega al inicio
+        miArray.unshift("Andrés");
+        miArray.sort();
+
+        //Equivalente al pop pero quita al inicio
+        var primero = miArray.shift();
+        alert(primero);
+
+        //Hasta aca, tengo "50,Andrés,Casa,Perro,Pez,true"
+        //miArray.splice(2); //Remueve los elementos desde el indice 2 (incluyendolo) en adelante
+        var retorno = miArray.splice(2,1,"Nuevo Elemento Splice"); //Remueve los elem desde el indice 2, hasta llegar a la cantidad "2"
+        console.log(retorno);
+        // retorno es un array
+
+
+
+        elSpan.innerText=miArray;
+    </script>
+</body>
+</html>

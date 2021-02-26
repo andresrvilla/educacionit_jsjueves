@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="spanVectorDos"></span><br>
+    <span id="spanVectorDosDespues"></span><br>
+    <script>
+        var miVector = [];
+        var miVectorDos = [1, 3, "Hola", "Chau",true];
+        miVectorDos.push("Nuevo Elemento");
+
+        var spanDos = document.getElementById("spanVectorDos");
+        spanDos.innerText=miVectorDos;
+
+        var elementoQuitado = miVectorDos.pop();
+        alert(elementoQuitado);
+
+        var spanDosPop = document.getElementById("spanVectorDosDespues");
+        spanDosPop.innerText = miVectorDos;
+
+        //document.getElementById("spanVectorDos").innerText=miVectorDos;
+
+        alert(miVectorDos[1]);
+
+        var persona = ["Apellido", "Nombre"];
+
+        var notas = [5,7,8,6,8,7,10,7,5,8];
+
+        var indice= 0;
+        var aux = 0;
+        while(indice < notas.length){
+            aux += notas[indice]; //Equivalente a aux = aux + notas[indice];
+            indice++; //equivalente a indice = indice + 1;
+        }
+        var promedio = aux / notas.length;
+
+        alert(promedio);
+    </script>
+</body>
+</html>
