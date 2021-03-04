@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Cargo</th>
+            </tr>
+        </thead>
+        <tbody id="filas">
+            
+        </tbody>
+    </table>
+    <script>
+        var personas = [
+            {
+                Nombre: "Andrés",
+                Apellido: "Villa",
+                Cargo: "Instructor"
+            },
+            {
+                Nombre: "Carlos",
+                Apellido: "Sosa",
+                Cargo: "Coordinador"
+            }
+        ]
+
+        personas.push({
+            Nombre: "Esteban",
+            Apellido: "Suarez",
+            Cargo: "Alumno"
+        });
+
+        console.log(personas);
+
+        for(var i = 0; i < personas.length; i++)
+        {
+            var persona = personas[i];
+            var nuevaFila = "<tr>";
+            nuevaFila += "<td>"+persona.Nombre+"</td>";
+            nuevaFila += "<td>"+persona.Apellido+"</td>";
+            nuevaFila += "<td>"+persona.Cargo+"</td>";
+            nuevaFila += "</tr>"; // nuevaFila = nuevaFila + "</tr>";
+
+            var elementoFilas = document.getElementById("filas");
+            elementoFilas.innerHTML += nuevaFila;
+        }
+    </script>
+</body>
+</html>
