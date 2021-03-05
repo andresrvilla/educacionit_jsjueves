@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="alert('Hola Mundo')">
+    <button onclick="saludar()">Saludar!!!</button><br>
+    <input type="text" id="txtNombrePersona" /><br>
+    <button id="btnSaludoDos">Saludar a la persona!!!</button><br>
+    <label id="lblSaludo"></label><br>
+    <button id="btnColor">Rojo</button><br>
+    <button id="btnColorAzul">Azul</button>
+    <script>
+        function saludar(){
+            alert("Hola!");
+        }
+
+        function saludarDos(){
+            var elementoInput = document.getElementById("txtNombrePersona");
+            var saludo = "Hola "+elementoInput.value;
+            var elementoLabel = document.getElementById("lblSaludo");
+            elementoLabel.innerText=saludo;
+        }
+
+        var elementoBoton = document.getElementById("btnSaludoDos");
+        elementoBoton.onclick = saludarDos;
+
+        function obtenerColor(){
+            alert("El color es "+this.innerText);
+            this.style="background-color:red; color: white;";
+        }
+        var elementoColor = document.getElementById("btnColor");
+        elementoColor.onclick = obtenerColor;
+        var elementoColorAzul = document.getElementById("btnColorAzul");
+        elementoColorAzul.onclick=obtenerColor;
+    </script>
+</body>
+</html>
