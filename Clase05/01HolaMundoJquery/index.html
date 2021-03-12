@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+    <p></p>
+    <span></span><br>
+    <input type="text" id="entradaDatos">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+       /*
+        jQuery("")
+        $("SELECTOR CSS").Metodo(param, param,...,param);
+
+        Selectores Css básicos
+        "p" -> slecciona las etiquetas "p"
+        "#unId" -> selecciona las etiquetas que tengan como id "unId"
+        ".unaClase" -> selecciona las etiquetas que tengan como clase "unaClase"
+       */
+
+       $("p").text("Hola Mundo!!!"); // metodo text equivale al "innerText" de javascript
+
+        /*var parrafos = document.getElementsByTagName("p");
+        for(var i = 0; i < parrafos.length; i++)
+        {
+            var elParrafo = parrafos[i];
+            elParrafo.innerText = "Hola Mundo";
+        }*/
+
+
+       $("span").html("<b>Hola mundo en negrita</b>"); //es el equivalente a innerHTML
+
+       $("#entradaDatos").val("Hola mundo"); //es el equivalente a value de js puro
+    </script>
+</body>
+</html>

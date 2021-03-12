@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cuadrado{
+            width: 300px;
+            height: 300px;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="cuadrado"></div>
+    <button id="btnOcultar">Ocultar</button><br>
+    <button id="btnMostrar">Mostrar</button><br>
+    <button id="btnToggle">Mostrar/Ocultar</button><br>
+    <button id="btnOcultarFadeOut">Ocultar FadeOut</button><br>
+    <button id="btnMostrarFadeIn">Mostrar FadeIn</button><br>
+    <button id="btnToggleFade">Mostrar/Ocultar Fade</button><br>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function ocultarCuadrado(){
+            $(".cuadrado").hide(1000); //tiempo en milisegundos
+        }
+
+        $("#btnOcultar").click(ocultarCuadrado);
+
+        $("#btnMostrar").click(function(){
+            $(".cuadrado").show(1000,function(){
+                //Esta funcion se llama "callback". Se ejecuta cuando termina la accion principal.
+                alert("Esto es despues del show");
+            });
+        });
+
+        $("#btnOcultarFadeOut").click(function(){
+            $(".cuadrado").fadeOut(500);
+        })
+
+        $("#btnMostrarFadeIn").click(function(){
+            $(".cuadrado").fadeIn(500);
+        })
+
+        
+        $("#btnToggle").click(function(){
+            $(".cuadrado").toggle(500);
+        });
+
+        $("#btnToggleFade").click(function(){
+            $(".cuadrado").fadeToggle(500);
+        });
+    </script>
+</body>
+</html>
